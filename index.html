@@ -18,6 +18,11 @@
 
         .important-places {
             color: blueviolet;
+            background-color: aquamarine;
+        }
+
+        .fruits-container li {
+            color: peru;
         }
     </style>
 </head>
@@ -40,8 +45,8 @@
             </ul>
         </section>
 
-        <section>
-            <h1 id="fruits-title">Fruits I like</h1>
+        <section class="fruits-container">
+            <h1 id="fruits-title" class="class-1 class-2 class-3">Fruits I like</h1>
             <ul>
                 <li>Apple</li>
                 <li>Banana</li>
@@ -71,16 +76,29 @@
         // }
         // console.log('adding JS inside the HTML file');
 
-        const liCollection = document.getElementsByTagName('li');
-        // console.log(liCollection);
-        for (const li of liCollection) {
-            console.log(li.innertext);
+        // const liCollection = document.getElementsByTagName('li');
+        // // console.log(liCollection);
+        // for (const li of liCollection) {
+        //     console.log(li.innertext);
+        // }
+
+        // const allHeadings = document.getElementsByTagName('h1');
+        // for (const h1 of allHeadings) {
+        //     console.log(h1.innerHTML);
+        // }
+
+        // const fruitsTitle = document.getElementById('fruits-title');
+        // fruitsTitle.innerText = 'fruits list';
+
+        // const places = document.getElementsByClassName('important-places');
+        // for (const place of places) { console.log(place.innerText); }
+
+        // // qurerySelectorAll
+        const someLi = document.querySelectorAll('.fruits-container li');
+        for (const li of someLi) {
+            console.log(li.innerText);
         }
 
-        const allHeadings = document.getElementsByTagName('h1');
-        for (const h1 of allHeadings) {
-            console.log(h1.innerHTML);
-        }
     </script>
 </body>
 
