@@ -6,12 +6,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour of Dom</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        li {
+            color: tomato;
+        }
+
+        #fruits-title {
+            color: black;
+        }
+
+        .important-places {
+            color: blueviolet;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <h1>Welcome to JS DOM Manipulation</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio animi illum nostrum reprehenderit quae
+            id officiis mollitia ipsa iure repellendus consequuntur, sapiente natus eveniet commodi, laboriosam et
+            doloremque iusto architecto.</p>
     </header>
+    <main>
+        <section>
+            <ul>
+                <h1>My Awesome DOM de baba</h1>
+                <li>Jalali Set</li>
+                <li>Shafayet</li>
+                <li>Bonobash</li>
+                <li>DOM de re baba!</li>
+            </ul>
+        </section>
+
+        <section>
+            <h1 id="fruits-title">Fruits I like</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Carrot</li>
+            </ul>
+        </section>
+
+        <section>
+            <h1 id="places-title">Places I like to visit</h1>
+            <ul>
+                <li class="important-places">Sundarban</li>
+                <li class="important-places">Bandorban</li>
+                <li class="important-places">Kataban</li>
+                <li>Salban</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="js/dom.js"></script>
+    <script>
+        // const student = {
+        //     name: 'ABUL',
+        //     ID: 11,
+        //     study: function (time) {
+        //         console.log(time, 'study kortese')
+        //     }
+        // }
+        // console.log('adding JS inside the HTML file');
+
+        const liCollection = document.getElementsByTagName('li');
+        // console.log(liCollection);
+        for (const li of liCollection) {
+            console.log(li.innertext);
+        }
+
+        const allHeadings = document.getElementsByTagName('h1');
+        for (const h1 of allHeadings) {
+            console.log(h1.innerHTML);
+        }
+    </script>
 </body>
 
 </html>
