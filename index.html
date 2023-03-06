@@ -15,11 +15,11 @@
         #fruits-title {
             color: black;
         }
-
+/* 
         .important-places {
             color: blueviolet;
             background-color: aquamarine;
-        }
+        } */
 
         .fruits-container li {
             color: peru;
@@ -34,7 +34,7 @@
             id officiis mollitia ipsa iure repellendus consequuntur, sapiente natus eveniet commodi, laboriosam et
             doloremque iusto architecto.</p>
     </header>
-    <main>
+    <main id="main-container">
         <section>
             <ul>
                 <h1>My Awesome DOM de baba</h1>
@@ -54,18 +54,20 @@
             </ul>
         </section>
 
-        <section>
+        <section id="places-container" class="large-text">
             <h1 id="places-title">Places I like to visit</h1>
-            <ul>
+            <ul id="places-list">
                 <li class="important-places">Sundarban</li>
                 <li class="important-places">Bandorban</li>
                 <li class="important-places">Kataban</li>
-                <li>Salban</li>
+                <li class="other-places">Salban</li>
             </ul>
         </section>
     </main>
 
     <script src="js/dom.js"></script>
+    <script src="js/append.js"></script>
+    <script src="js/styleInJS.js"></script>
     <script>
         // const student = {
         //     name: 'ABUL',
@@ -96,7 +98,7 @@
         // // qurerySelectorAll
         const someLi = document.querySelectorAll('.fruits-container li');
         for (const li of someLi) {
-            console.log(li.innerText);
+            // console.log(li.innerText);
         }
 
     </script>
